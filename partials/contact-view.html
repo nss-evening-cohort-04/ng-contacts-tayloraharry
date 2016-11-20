@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for contact..." ng-model="searchText">
+          <span class="input-group-btn">
+            <button class="btn btn-default"><i class="fa fa-search"></i></button>
+          </span>
+        </div>
+    </div>
+</div>
+<div ng-controller="MainContactCtrl">
+  <div class="row">
+    <div ng-repeat="contact in contacts | filter: searchText">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-8">
+                <h4>{{contact.name}}</h4>
+                <h5>Day phone: {{contact.day_phone}} &nbsp&nbsp&nbsp Evening phone: {{contact.evening_phone}}</h5>
+                <h5>Email: {{contact.email}}</h5>
+                <h5>Address Line 1: {{contact.address_line_1}}</h5>
+                <h5>Address Line 2: {{contact.address_line_2}}</h5>
+                <h5>City: {{contact.city}} &nbsp&nbsp&nbsp State: {{contact.state}}</h5>
+                <h5>Zip: {{contact.zip}} &nbsp&nbsp&nbsp Country: {{contact.country}}</h5>
+                </div>
+                <a class="btn btn-info fa fa-pencil-square-o col-md-1 col-md-offset-2" href="#/contacts/edit/{{contact.id}}"></a>
+                <button ng-click="deleteContact(contact.id)" class="btn btn-danger fa fa-trash-o col-md-1"></button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

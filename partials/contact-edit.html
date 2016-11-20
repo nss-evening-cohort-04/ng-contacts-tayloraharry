@@ -1,0 +1,13 @@
+<div ng-controller="ContactEditCtrl">
+<h1>Name: <input type="text" value="{{selectedContact.name}}"></h1>
+<h2>Day phone: <input type="text" value="{{selectedContact.day_phone}}"></h2>
+<h2>Evening Phone: <input type="text" value="{{selectedContact.evening_phone}}"></h2>
+<h2>E-mail: <input type="text" value="{{selectedContact.email}}"></h2>
+<h2>Address Line 1: <input type="text" value="{{selectedContact.address_line_1}}"></h2>
+<h2>Address Line 2: <input type="text" value="{{selectedContact.address_line_2}}"></h2>
+<h2>City: <input type="text" value="{{selectedContact.city}}"></h2>
+<h2>State: <input type="text" value="{{selectedContact.state}}"></h2>
+<h2>Zip: <input type="text" value="{{selectedContact.zip}}"></h2>
+<h2>Country: <input type="text" value="{{selectedContact.country}}"></h2>
+<button type="submit" ng-click="saveEditedContact(selectedContact)" class="btn btn-success">Save Changes</button>
+</div>
